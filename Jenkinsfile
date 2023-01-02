@@ -107,10 +107,10 @@ pipeline {
                 }                       
             }                        
         }
-        stage('Cleanup'){
-            steps {
-                echo 'Cleanup'
-            }
-        }                        
+        // stage('Cleanup'){
+        //     steps {
+        //         echo 'Cleanup'
+        //     }
+        // }                        
     }                
 }
