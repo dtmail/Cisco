@@ -74,6 +74,11 @@ pipeline {
                 stage('PROD') {
                     stages {
                         stage('Hello') {
+                            when {
+                                not {
+                                    branch "main"
+                                }
+                            }
                             steps {
                                 echo 'Hello World'
                             }
