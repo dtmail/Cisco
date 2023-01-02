@@ -1,36 +1,43 @@
 pipeline {
     agent any
-
     stages {
-        stage('Hello') {
-            steps {
-                echo 'Hello World'
-            }
-        }
+        stage ('Build and run'){
+            parallel {
+                stage('DEV') {
+                        stages {
+                            stage('Hello') {
+                                steps {
+                                    echo 'Hello World'
+                                }
+                            }
 
-        stage('Build') {
-            steps {
-                echo 'Building'
-            }
-        }
+                            stage('Build') {
+                                steps {
+                                    echo 'Building'
+                                }
+                            }
 
-        stage('Deploy') {
-            steps {
-                echo 'Deploying'
-            }
-        }
+                            stage('Deploy') {
+                                steps {
+                                    echo 'Deploying'
+                                }
+                            }
 
-        stage('Test') {
-            steps {
-                echo 'Testing'
-            }
-        }
+                            stage('Test') {
+                                steps {
+                                    echo 'Testing'
+                                }
+                            }
 
-        stage('Release') {
-            steps {
-                echo 'Releasing'
-            }
-        }
+                            stage('Release') {
+                                steps {
+                                    echo 'Releasing'
+                                }
+                            }
 
-    }
+                        }
+                }                        
+            }                        
+        }                
+    }                
 }
