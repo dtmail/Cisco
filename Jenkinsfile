@@ -75,7 +75,7 @@ pipeline {
                     when {
                         anyOf {
                             // expression {params.ENVIRONMENT == 'all'}
-                            expression {params.ENVIRONMENT == 'Router'}
+                            // expression {params.ENVIRONMENT == 'Router'}
                         }
                     }
                     stages {
