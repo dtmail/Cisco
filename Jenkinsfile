@@ -72,12 +72,12 @@ pipeline {
                     }
                 }
                 stage('PROD') {
-                    // when {
-                    //     anyOf {
-                    //         expression {params.ENVIRONMENT == 'all'}
-                    //         expression {params.ENVIRONMENT == 'Router'}
-                    //     }
-                    // }
+                    when {
+                        anyOf {
+                            // expression {params.ENVIRONMENT == 'all'}
+                            expression {params.ENVIRONMENT == 'Router'}
+                        }
+                    }
                     stages {
                         stage('Hello') {
                             // when {
