@@ -106,6 +106,11 @@ pipeline {
                         }
                 }                       
             }                        
-        }                
+        }
+        stage('Cleanup'){
+            steps {
+                echo 'Cleanup'
+            }
+        }                        
     }                
 }
