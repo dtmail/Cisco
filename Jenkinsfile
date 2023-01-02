@@ -80,11 +80,11 @@ pipeline {
                     }
                     stages {
                         stage('Hello') {
-                            when {
-                                not {
-                                    branch "main"
-                                }
-                            }
+                            // when {
+                            //     not {
+                            //         branch "main"
+                            //     }
+                            // }
                             steps {
                                 echo 'Hello World'
                             }
