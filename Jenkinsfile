@@ -109,7 +109,7 @@ pipeline {
         }
         stage('Cleanup'){
             steps {
-                cleanWs()
+                echo 'Cleanup'
             }
         }                        
     }                
